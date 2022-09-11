@@ -26,7 +26,7 @@ app.use('/', Routes);
 
 import { Server } from 'socket.io';
 
-const io = new Server(9000, {
+const io = new Server("https://testserver-ltxy.onrender.com", {
     cors: {
         origin: 'https://whats-app-web.onrender.com',
     }, 
