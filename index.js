@@ -28,7 +28,7 @@ app.use(cors());
 const httpserver=createServer(app);
 const io=new Server(httpserver,{
     cors: {
-        origin: "https://whats-app-web.onrender.com",
+        origin: "*",
         credentials: true
       }
 
