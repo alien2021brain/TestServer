@@ -19,9 +19,12 @@ const PORT = process.env.PORT || 8000;
 
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors({
+    origin: "https://whats-app-web.onrender.com"
+}));
 app.use('/', Routes);
 
-app.use(cors());
+
 
 
 // listning on same server socket io
@@ -29,7 +32,8 @@ const httpserver=createServer(app);
 const io=new Server(httpserver,{
     cors: {
         origin: "https://whats-app-web.onrender.com",
-        credentials: true
+        credentials: true,
+        methods: ["GET", "POST"]
       }
 
 
