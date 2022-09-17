@@ -1,4 +1,6 @@
 import express from 'express';
+import cors drom 'cors
+const app=express();
 
 
 import { newConversation, getConversation } from '../controller/conversation-controller.js';
@@ -7,6 +9,10 @@ import { newMessage, getMessage }from '../controller/message-controller.js';
 import { uploadImage, getImage } from '../controller/image-controller.js';
 
 import upload from '../utils/upload.js';
+
+app.use(cors({
+    origin: "https://whats-app-web.onrender.com"
+}));
 
 const route = express.Router();
 
