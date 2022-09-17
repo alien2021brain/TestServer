@@ -1,5 +1,5 @@
 import express from 'express';
-import cors drom 'cors
+import cors from 'cors'
 const app=express();
 
 
